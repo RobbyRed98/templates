@@ -1,0 +1,52 @@
+{
+	// Basic print and str templates
+	"Print a f-string": {
+		"prefix": "prif",
+		"body": [
+			"print(f'$1')",
+		],
+		"description": "Creates a print call including a format string!"
+	},
+	"f-string": {
+		"prefix": "fstr",
+		"body": [
+			"f'$1'",
+		],
+		"description": "Creates a f-string."
+	},
+
+	// Simple click cli templates
+	"Create click command argument(s)": {
+		"prefix": "cliarg",
+		"body": [
+			"@click.argument('${1:args}', nargs='${2:1}')",
+		],
+		"description": "Creates agrument(s) for a click command."
+	},
+	"Create click command option": {
+		"prefix": "cliopt",
+		"body": [
+			"@click.option('--${1:x}', '${1:x}', default=${2:None}, help='$3')"
+		],
+		"description": "Creates a option for a click command."
+	},
+	"Create click command flag": {
+		"prefix": "cliflag",
+		"body": [
+			"@click.option('--${1:y}', '${1:y}', is_flag=True, help='$2')",
+		],
+		"description": "Creates a flag for a click command."
+	},
+	"Create click command": {
+		"prefix": "clicom",
+		"body": [
+			"@click.command()",
+			"@click.argument('${1:args}', nargs=${2:1})",
+			"@click.option('--${3:x}', '${3:x}', default=${4:None})",
+			"@click.option('--${5:y}', '${5:y}', is_flag=True)",
+			"def ${7:cli}(${1:args}, ${3:x}, ${5:y}):",
+			"    pass"
+		],
+		"description": "Creates command with some default stuff."
+	}
+}
