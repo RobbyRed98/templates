@@ -1,5 +1,5 @@
 {
-	// Basic print and str templates
+	// Extends basic snippets
 	"Print a f-string": {
 		"prefix": "prif",
 		"body": [
@@ -13,6 +13,22 @@
 			"f'$1'",
 		],
 		"description": "Creates a f-string."
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"def ${1:fn}($2)$3:",
+			"    $0",
+			"    pass"
+		],
+		"description": "Creates a f-string."
+	},
+	"fim": {
+		"prefix": "fim",
+		"body": [
+			"from $1 import $3"
+		],
+		"description": "Creates a from foo import bar statement."
 	},
 
 	// Simple click cli templates
