@@ -30,6 +30,15 @@
 		],
 		"description": "Creates a from foo import bar statement."
 	},
+	"cfn": {
+		"prefix": "cfn",
+		"body": [
+			"@classmethod",
+			"def ${1:cfn}(cls, $2)$3:",
+			"    $0",
+			"    pass"
+		]
+	},
 
 	// Simple click cli templates
 	"Create click command argument(s)": {
@@ -42,7 +51,7 @@
 	"Create click command option": {
 		"prefix": "cliopt",
 		"body": [
-			"@click.option('--${1:x}', '${1:x}', default=${2:None}, help='$3')"
+			"@click.option('--${1:x}', '${1:x}', help='$2')"
 		],
 		"description": "Creates a option for a click command."
 	},
